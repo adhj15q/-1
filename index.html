@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(cool place)웹 사이트 소개</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f3ff; /* 연한 하늘색 배경 */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li::before {
+            content: "\2022";
+            color: #007bff;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>cool place(웹 소개)</h1>
+    </header>
+    <div class="container">
+        <p>안녕하세요! 저희 웹 사이트에 오신 것을 환영합니다.</p>
+        <p>저희 사이트는 다음과 같은 목적과 주요 기능을 제공합니다:</p>
+        <ul>
+            <li>사용자들에게 정보 제공</li>
+            <li>서비스의 홍보</li>
+            <li>사용자들 간의 소통 촉진</li>
+            <li>기타 등등 </li>
+        </ul>
+        <p>더 자세한 내용은 아래 버튼을 클릭하여 확인해 주세요.</p>
+        <a href="#" class="button" onclick="showMore();">자세히 보기</a>
+
+        <div id="moreInfo" class="hidden">
+            <h2>더 자세한 정보</h2>
+            <p>더 자세한 웹 서버 소개입니다.</p>
+            <li>웹 만든 사람 1명</li>
+            <li>지원자 0명</li>
+            <li>총 제작 기간 30일</li>
+            <li>웹 또 만들 계획은 아직 없음.</li>
+            <li>또 궁금하신거나 물어보실거 있으시면 문의 바랍니다.</li>
+        </div>
+    </div>
+
+    <script>
+        function showMore() {
+            var moreInfo = document.getElementById('moreInfo');
+            moreInfo.classList.toggle('hidden');
+
+            if (!moreInfo.classList.contains('hidden')) {
+                moreInfo.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
